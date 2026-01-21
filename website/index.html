@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הזזת 17 תמונות</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      position: relative;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .moveable-image {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    
+    .target-zone {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 2px dashed #999;
+      background: rgba(200, 200, 255, 0.3);
+      border-radius: 10px;
+    }
+    
+    .controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      margin: 5px 0;
+      background: #007AFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    button:active {
+      background: #0051D5;
+    }
+    
+    .speed-control {
+      margin: 15px 0;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    
+    .speed-control label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    .speed-value {
+      background: #007AFF;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- אזורי יעד -->
+  <div class="target-zone" style="left: 200px; top: 150px;"></div>
+  <div class="target-zone" style="left: 350px; top: 150px;"></div>
+  <div class="target-zone" style="left: 500px; top: 150px;"></div>
+  <div class="target-zone" style="left: 650px; top: 150px;"></div>
+  <div class="target-zone" style="left: 800px; top: 150px;"></div>
+  
+  <div class="target-zone" style="left: 200px; top: 300px;"></div>
+  <div class="target-zone" style="left: 350px; top: 300px;"></div>
+  <div class="target-zone" style="left: 500px; top: 300px;"></div>
+  <div class="target-zone" style="left: 650px; top: 300px;"></div>
+  <div class="target-zone" style="left: 800px; top: 300px;"></div>
+  
+  <div class="target-zone" style="left: 200px; top: 450px;"></div>
+  <div class="target-zone" style="left: 350px; top: 450px;"></div>
+  <div class="target-zone" style="left: 500px; top: 450px;"></div>
+  <div class="target-zone" style="left: 650px; top: 450px;"></div>
+  <div class="target-zone" style="left: 800px; top: 450px;"></div>
+  
+  <div class="target-zone" style="left: 350px; top: 600px;"></div>
+  <div class="target-zone" style="left: 650px; top: 600px;"></div>
+  
+  <!-- 17 תמונות -->
+  <img id="img1" class="moveable-image" src="https://via.placeholder.com/50/ff6b6b/ffffff?text=1" style="left: 50px; top: 50px;">
+  <img id="img2" class="moveable-image" src="https://via.placeholder.com/50/4ecdc4/ffffff?text=2" style="left: 920px; top: 80px;">
+  <img id="img3" class="moveable-image" src="https://via.placeholder.com/50/95e1d3/ffffff?text=3" style="left: 150px; top: 600px;">
+  <img id="img4" class="moveable-image" src="https://via.placeholder.com/50/f38181/ffffff?text=4" style="left: 800px; top: 650px;">
+  <img id="img5" class="moveable-image" src="https://via.placeholder.com/50/aa96da/ffffff?text=5" style="left: 450px; top: 100px;">
+  <img id="img6" class="moveable-image" src="https://via.placeholder.com/50/fcbad3/ffffff?text=6" style="left: 100px; top: 350px;">
+  <img id="img7" class="moveable-image" src="https://via.placeholder.com/50/a8d8ea/ffffff?text=7" style="left: 900px; top: 300px;">
+  <img id="img8" class="moveable-image" src="https://via.placeholder.com/50/ffaaa5/ffffff?text=8" style="left: 250px; top: 500px;">
+  <img id="img9" class="moveable-image" src="https://via.placeholder.com/50/ffd3b6/ffffff?text=9" style="left: 750px; top: 200px;">
+  <img id="img10" class="moveable-image" src="https://via.placeholder.com/50/dcedc1/ffffff?text=10" style="left: 550px; top: 600px;">
+  <img id="img11" class="moveable-image" src="https://via.placeholder.com/50/a8e6cf/ffffff?text=11" style="left: 50px; top: 200px;">
+  <img id="img12" class="moveable-image" src="https://via.placeholder.com/50/ff8b94/ffffff?text=12" style="left: 950px; top: 500px;">
+  <img id="img13" class="moveable-image" src="https://via.placeholder.com/50/ffc6ff/ffffff?text=13" style="left: 400px; top: 650px;">
+  <img id="img14" class="moveable-image" src="https://via.placeholder.com/50/bdb2ff/ffffff?text=14" style="left: 700px; top: 50px;">
+  <img id="img15" class="moveable-image" src="https://via.placeholder.com/50/a0c4ff/ffffff?text=15" style="left: 200px; top: 100px;">
+  <img id="img16" class="moveable-image" src="https://via.placeholder.com/50/caffbf/ffffff?text=16" style="left: 850px; top: 600px;">
+  <img id="img17" class="moveable-image" src="https://via.placeholder.com/50/fdffb6/ffffff?text=17" style="left: 600px; top: 400px;">
+  
+  <!-- כפתורי בקרה -->
+  <div class="controls">
+    <h3>בקרת תנועה</h3>
+    
+    <div class="speed-control">
+      <label>מהירות: <span class="speed-value" id="speedDisplay">1000ms</span></label>
+      <input type="range" id="speedSlider" min="200" max="5000" value="1000" step="100" style="width: 100%;">
+    </div>
+    
+    <button onclick="moveAllTogether()">הזז הכל ביחד</button>
+    <button onclick="moveAllSequence()">הזז הכל ברצף</button>
+    <button onclick="resetAll()">אפס הכל</button>
+  </div>
+
+  <script>
+    // מיקומי היעד
+    var targets = [
+      {x: 225, y: 175},
+      {x: 375, y: 175},
+      {x: 525, y: 175},
+      {x: 675, y: 175},
+      {x: 825, y: 175},
+      {x: 225, y: 325},
+      {x: 375, y: 325},
+      {x: 525, y: 325},
+      {x: 675, y: 325},
+      {x: 825, y: 325},
+      {x: 225, y: 475},
+      {x: 375, y: 475},
+      {x: 525, y: 475},
+      {x: 675, y: 475},
+      {x: 825, y: 475},
+      {x: 375, y: 625},
+      {x: 675, y: 625}
+    ];
+    
+    // מיקומי התחלה
+    var starts = [
+      {x: 50, y: 50}, {x: 920, y: 80}, {x: 150, y: 600}, {x: 800, y: 650},
+      {x: 450, y: 100}, {x: 100, y: 350}, {x: 900, y: 300}, {x: 250, y: 500},
+      {x: 750, y: 200}, {x: 550, y: 600}, {x: 50, y: 200}, {x: 950, y: 500},
+      {x: 400, y: 650}, {x: 700, y: 50}, {x: 200, y: 100}, {x: 850, y: 600},
+      {x: 600, y: 400}
+    ];
+    
+    // עדכון תצוגת מהירות
+    document.getElementById('speedSlider').addEventListener('input', function() {
+      document.getElementById('speedDisplay').textContent = this.value + 'ms';
+    });
+    
+    // קבלת מהירות
+    function getSpeed() {
+      return parseInt(document.getElementById('speedSlider').value);
+    }
+    
+    // פונקציה להזזת תמונה
+    function moveImageTo(imgId, targetX, targetY, duration, callback) {
+      var img = document.getElementById(imgId);
+      if (!img) return;
+      
+      var startX = parseFloat(img.style.left) || 0;
+      var startY = parseFloat(img.style.top) || 0;
+      var startTime = null;
+      
+      function animate(currentTime) {
+        if (!startTime) startTime = currentTime;
+        var elapsed = currentTime - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        
+        var eased = progress < 0.5 
+          ? 2 * progress * progress 
+          : -1 + (4 - 2 * progress) * progress;
+        
+        var currentX = startX + (targetX - startX) * eased;
+        var currentY = startY + (targetY - startY) * eased;
+        
+        img.style.left = currentX + 'px';
+        img.style.top = currentY + 'px';
+        
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          if (callback) callback();
+        }
+      }
+      
+      requestAnimationFrame(animate);
+    }
+    
+    // הזז הכל ביחד
+    function moveAllTogether() {
+      var speed = getSpeed();
+      for (var i = 1; i <= 17; i++) {
+        moveImageTo('img' + i, targets[i-1].x, targets[i-1].y, speed);
+      }
+    }
+    
+    // הזז הכל ברצף
+    function moveAllSequence() {
+      var speed = getSpeed();
+      var i = 0;
+      
+      function moveNext() {
+        if (i >= 17) return;
+        i++;
+        moveImageTo('img' + i, targets[i-1].x, targets[i-1].y, speed, moveNext);
+      }
+      
+      moveNext();
+    }
+    
+    // איפוס
+    function resetAll() {
+      var speed = getSpeed();
+      for (var i = 1; i <= 17; i++) {
+        moveImageTo('img' + i, starts[i-1].x, starts[i-1].y, speed);
+      }
+    }
+  </script>
+</body>
+</html>

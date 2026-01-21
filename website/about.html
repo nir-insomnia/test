@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קצת עלי - אתר אישי</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&family=Heebo:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page">
+    <!-- תפריט צף -->
+    <nav class="floating-nav">
+        <div class="nav-item">
+            <a href="index.html">🏠</a>
+            <span class="tooltip">בית</span>
+        </div>
+        <div class="nav-item">
+            <a href="about.html" class="active">👤</a>
+            <span class="tooltip">קצת עלי</span>
+        </div>
+        <div class="nav-item">
+            <a href="blog.html">📝</a>
+            <span class="tooltip">בלוג</span>
+        </div>
+        <div class="nav-item">
+            <a href="game.html">🎮</a>
+            <span class="tooltip">משחק</span>
+        </div>
+    </nav>
+
+    <!-- כותרת דף -->
+    <header class="page-header">
+        <div class="header-bg"></div>
+        <h1 class="page-title-main">קצת עלי</h1>
+        <div class="breadcrumb">
+            <a href="index.html">בית</a>
+            <span class="separator">/</span>
+            <span>קצת עלי</span>
+        </div>
+    </header>
+
+    <!-- תוכן מרכזי -->
+    <main class="main-content">
+        <div class="about-layout">
+            <!-- כרטיס פרופיל -->
+            <aside class="profile-card">
+                <div class="profile-image-wrapper">
+                    <div class="profile-decoration"></div>
+                    <div class="profile-image">
+                        <svg width="250" height="250" viewBox="0 0 250 250">
+                            <defs>
+                                <clipPath id="hexClip">
+                                    <path d="M125,10 L215,60 L215,160 L125,210 L35,160 L35,60 Z"/>
+                                </clipPath>
+                            </defs>
+                            <rect width="250" height="250" fill="#FFD700" clip-path="url(#hexClip)"/>
+                            <text x="125" y="115" text-anchor="middle" font-size="28" fill="#000" font-weight="900" font-family="Heebo">תמונה</text>
+                            <text x="125" y="150" text-anchor="middle" font-size="28" fill="#000" font-weight="900" font-family="Heebo">שלך</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="profile-info">
+                    <h2 class="profile-name">השם שלך</h2>
+                    <p class="profile-role">תלמיד·ה כיתה י'</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <span>email@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>תל אביב, ישראל</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- תוכן ראשי -->
+            <article class="about-content">
+                <section class="bio-section">
+                    <h2 class="section-heading">
+                        <span class="heading-number">01</span>
+                        <span class="heading-text">מי אני?</span>
+                    </h2>
+                    <div class="text-box">
+                        <p>
+                            שלום! אני תלמיד·ה בכיתה י' שלומד·ת תכנות ופיתוח אתרים. 
+                            אני אוהב·ת ללמוד טכנולוגיות חדשות וליצור פרויקטים מעניינים.
+                        </p>
+                        <p>
+                            האתר הזה הוא חלק מהלמידה שלי, ואני מקווה שתהנו לגלוש בו!
+                        </p>
+                    </div>
+                </section>
+
+                <section class="interests-section">
+                    <h2 class="section-heading">
+                        <span class="heading-number">02</span>
+                        <span class="heading-text">התחביבים שלי</span>
+                    </h2>
+                    <div class="interests-grid">
+                        <div class="interest-card">
+                            <div class="interest-icon">💻</div>
+                            <h3>תכנות</h3>
+                            <p>יצירת אתרים ואפליקציות</p>
+                        </div>
+                        <div class="interest-card">
+                            <div class="interest-icon">🎮</div>
+                            <h3>משחקי וידאו</h3>
+                            <p>גיימינג וחוויות דיגיטליות</p>
+                        </div>
+                        <div class="interest-card">
+                            <div class="interest-icon">🎨</div>
+                            <h3>עיצוב</h3>
+                            <p>אומנות ויצירתיות</p>
+                        </div>
+                        <div class="interest-card">
+                            <div class="interest-icon">📚</div>
+                            <h3>קריאה</h3>
+                            <p>ספרים וסיפורים</p>
+                        </div>
+                        <div class="interest-card">
+                            <div class="interest-icon">🎵</div>
+                            <h3>מוזיקה</h3>
+                            <p>האזנה ויצירה</p>
+                        </div>
+                        <div class="interest-card">
+                            <div class="interest-icon">⚽</div>
+                            <h3>ספורט</h3>
+                            <p>פעילות גופנית</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="skills-section">
+                    <h2 class="section-heading">
+                        <span class="heading-number">03</span>
+                        <span class="heading-text">מה אני יודע·ת?</span>
+                    </h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML & CSS</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">עיצוב גרפי</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- חלק תחתון -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-date">
+                <span class="date-label">תאריך:</span>
+                <span id="currentDate"></span>
+            </div>
+            <div class="footer-text">
+                נבנה עם ❤️ על ידי תלמיד כיתה י'
+            </div>
+        </div>
+        <div class="footer-wave"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

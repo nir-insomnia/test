@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק - אתר אישי</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&family=Heebo:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+    <!-- תפריט צף -->
+    <nav class="floating-nav">
+        <div class="nav-item">
+            <a href="index.html">🏠</a>
+            <span class="tooltip">בית</span>
+        </div>
+        <div class="nav-item">
+            <a href="about.html">👤</a>
+            <span class="tooltip">קצת עלי</span>
+        </div>
+        <div class="nav-item">
+            <a href="blog.html">📝</a>
+            <span class="tooltip">בלוג</span>
+        </div>
+        <div class="nav-item">
+            <a href="game.html" class="active">🎮</a>
+            <span class="tooltip">משחק</span>
+        </div>
+    </nav>
+
+    <!-- כותרת דף -->
+    <header class="page-header">
+        <div class="header-bg"></div>
+        <h1 class="page-title-main">בואו לשחק!</h1>
+        <div class="breadcrumb">
+            <a href="index.html">בית</a>
+            <span class="separator">/</span>
+            <span>משחק</span>
+        </div>
+    </header>
+
+    <!-- תוכן מרכזי -->
+    <main class="main-content">
+        <div class="game-intro">
+            <p class="game-description">
+                משחק ניחוש מספרים מהנה! נסו לנחש את המספר שבין 1 ל-10 
+                בכמה שפחות ניסיונות. יאללה, בהצלחה! 🎯
+            </p>
+        </div>
+
+        <div class="game-container">
+            <div class="game-status">
+                <div class="status-item">
+                    <div class="status-label">ניסיונות</div>
+                    <div class="status-value" id="attempts">0</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">שיא</div>
+                    <div class="status-value" id="bestScore">-</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">ניצחונות</div>
+                    <div class="status-value" id="wins">0</div>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div class="game-emoji" id="gameEmoji">🤔</div>
+                
+                <div class="game-message" id="gameMessage">
+                    חשבתי על מספר בין 1 ל-10...
+                    <br>
+                    תוכל לנחש מה זה?
+                </div>
+
+                <div class="game-input-area">
+                    <input 
+                        type="number" 
+                        id="guessInput" 
+                        min="1" 
+                        max="10" 
+                        placeholder="?" 
+                        class="guess-input"
+                    >
+                    <button id="guessButton" class="game-button guess-button">
+                        <span class="button-text">נחש!</span>
+                        <span class="button-icon">🎲</span>
+                    </button>
+                </div>
+
+                <button id="resetButton" class="game-button reset-button" style="display: none;">
+                    <span class="button-text">משחק חדש</span>
+                    <span class="button-icon">🔄</span>
+                </button>
+
+                <div class="hint-box" id="hintBox" style="display: none;">
+                    <div class="hint-icon">💡</div>
+                    <div class="hint-text" id="hintText"></div>
+                </div>
+            </div>
+
+            <div class="numbers-display">
+                <div class="numbers-label">המספרים שניחשת:</div>
+                <div class="numbers-grid" id="guessedNumbers"></div>
+            </div>
+        </div>
+
+        <!-- כללים -->
+        <div class="rules-section">
+            <h2 class="rules-title">איך משחקים?</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-number">1</div>
+                    <div class="rule-text">המחשב בחר מספר בין 1 ל-10</div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-number">2</div>
+                    <div class="rule-text">נחשו את המספר</div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-number">3</div>
+                    <div class="rule-text">קבלו רמזים אם אתם קרובים</div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-number">4</div>
+                    <div class="rule-text">נסו לנחש בכמה שפחות ניסיונות!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- טיפים -->
+        <div class="tips-section">
+            <h3>💡 טיפים</h3>
+            <ul class="tips-list">
+                <li>התחילו מהאמצע - נחשו 5 או 6 כדי לקבל רמז טוב</li>
+                <li>שימו לב לרמזים - הם יעזרו לכם לצמצם את האפשרויות</li>
+                <li>נסו לזכור איזה מספרים כבר ניחשתם</li>
+                <li>המשחק זוכר את השיא שלכם - נסו לשפר אותו!</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- חלק תחתון -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-date">
+                <span class="date-label">תאריך:</span>
+                <span id="currentDate"></span>
+            </div>
+            <div class="footer-text">
+                נבנה עם ❤️ על ידי תלמיד כיתה י'
+            </div>
+        </div>
+        <div class="footer-wave"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
