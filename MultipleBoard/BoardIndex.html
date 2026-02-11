@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לוח הכפל</title>
+    
+    <!-- קישור לקובץ CSS חיצוני -->
+    <link rel="stylesheet" href="BoardStyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>לוח הכפל שלי</h1>
+        <p class="instructions">הכנס 10 מספרים וקבל לוח כפל מלא!</p>
+        
+        <!-- שדות קלט -->
+        <div class="input-container">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="num1">מספר 1:</label>
+                    <input type="number" id="num1" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num2">מספר 2:</label>
+                    <input type="number" id="num2" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num3">מספר 3:</label>
+                    <input type="number" id="num3" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num4">מספר 4:</label>
+                    <input type="number" id="num4" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num5">מספר 5:</label>
+                    <input type="number" id="num5" placeholder="0">
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="num6">מספר 6:</label>
+                    <input type="number" id="num6" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num7">מספר 7:</label>
+                    <input type="number" id="num7" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num8">מספר 8:</label>
+                    <input type="number" id="num8" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num9">מספר 9:</label>
+                    <input type="number" id="num9" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="num10">מספר 10:</label>
+                    <input type="number" id="num10" placeholder="0">
+                </div>
+            </div>
+        </div>
+        
+        <!-- כפתורים -->
+        <div class="button-group">
+            <button class="btn-create" onclick="createTable()">צור לוח כפל</button>
+            <button class="btn-clear" onclick="clearAll()">נקה הכל</button>
+        </div>
+        
+        <!-- אזור הצגת לוח הכפל -->
+        <div id="tableContainer"></div>
+    </div>
+
+    <!-- קישור לקובץ JavaScript חיצוני -->
+    <script src="BoardScript.js"></script>
+</body>
+</html>

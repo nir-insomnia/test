@@ -1,0 +1,196 @@
+/* עיצוב כללי */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* מיכל ראשי */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* כותרת */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+/* הוראות */
+.instructions {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* מיכל שדות קלט */
+.input-container {
+    margin-bottom: 20px;
+}
+
+/* שורת קלט */
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+/* קבוצת קלט */
+.input-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* תוויות */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* שדות קלט */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* קבוצת כפתורים */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* כפתורים */
+button {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* כפתור יצירה */
+.btn-create {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-create:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* כפתור ניקוי */
+.btn-clear {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-clear:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+}
+
+/* מיכל הטבלה */
+#tableContainer {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* טבלת לוח הכפל */
+.multiplication-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* תאי טבלה */
+.multiplication-table th,
+.multiplication-table td {
+    border: 2px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* תאי כותרת */
+.multiplication-table th {
+    background-color: #667eea;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* שורות זוגיות */
+.multiplication-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* תאי רגילים */
+.multiplication-table td {
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* אפקט ריחוף על תאים */
+.multiplication-table td:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* תא פינה (ריק) */
+.multiplication-table .corner {
+    background-color: #764ba2;
+}
+
+/* עיצוב רספונסיבי */
+@media (max-width: 768px) {
+    .input-row {
+        flex-direction: column;
+    }
+    
+    .input-group {
+        min-width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .multiplication-table th,
+    .multiplication-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

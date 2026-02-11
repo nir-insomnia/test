@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לוח הכפל - התחלה</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>מחשבון כפל</h1>
+        
+        <div class="input-group">
+            <label for="num1">מספר ראשון:</label>
+            <input type="number" id="num1" placeholder="הכנס מספר ראשון">
+        </div>
+        
+        <div class="input-group">
+            <label for="num2">מספר שני:</label>
+            <input type="number" id="num2" placeholder="הכנס מספר שני">
+        </div>
+        
+        <button onclick="multiply()">בצע</button>
+        
+        <div id="result">
+            <div class="result-text">המספר הראשון: <span id="displayNum1"></span></div>
+            <div class="result-text">המספר השני: <span id="displayNum2"></span></div>
+            <div class="result-text answer">התוצאה: <span id="displayResult"></span></div>
+        </div>
+    </div>
+
+    <script src="multiple.js"></script>
+</body>
+</html>

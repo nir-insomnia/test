@@ -1,0 +1,90 @@
+/* עיצוב כללי של הדף */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* מיכל ראשי */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* כותרת */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* קבוצת קלט */
+.input-group {
+    margin: 15px 0;
+}
+
+/* תוויות */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* שדות קלט */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* כפתור */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* אפקט ריחוף על הכפתור */
+button:hover {
+    background-color: #45a049;
+}
+
+/* אזור תוצאות - מוסתר כברירת מחדל */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e7f3ff;
+    border-radius: 5px;
+    display: none;
+}
+
+/* הצגת אזור התוצאות */
+#result.show {
+    display: block;
+}
+
+/* טקסט תוצאות */
+.result-text {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* תשובה - התוצאה הסופית */
+.answer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2196F3;
+}
