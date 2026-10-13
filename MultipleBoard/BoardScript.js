@@ -2,6 +2,7 @@
 function createTable() {
     // מערך לאחסון המספרים
     var numbers = [];
+   
     
     // קריאת 10 המספרים מהמשתמש
     for (var i = 1; i <= 10; i++) {

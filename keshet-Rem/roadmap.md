@@ -1,0 +1,12 @@
+# Roadmap
+- [x] Build Hebrew RTL scrolling home page and navigation
+- [x] Add interactive curriculum and project details
+- [x] Add contact form and map
+- [x] Apply logo-based design system and favicon
+- [x] Verify desktop and mobile layouts
+- [x] Move all editable text into src/content (site.ts, curriculum.ts, projects.ts)
+- [x] Add blog: markdown posts, /blog list, /blog/$slug post pages
+- [x] Add image folders for project and blog photos
+- [x] Write editing instructions in src/content/README.md
+- [ ] User connects the project to GitHub (Plus menu → GitHub → Connect project)
+- [ ] User fills coordinator name, phone, email, address in src/content/site.ts
